@@ -2,3 +2,8 @@ px2rem(px)
   //return unit(px * 375 / 750 / 20, 'rem')
   //设计稿是750 所以基础值为75
   return unit(px / 75, 'rem')
+  
+bg-image($url)
+  background-image: url('../images/' + $url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url('../images/' + $url + "@3x.png")
